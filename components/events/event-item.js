@@ -1,6 +1,5 @@
-import Link from "next/link";
-import classes from "./events/event-item.module.css";
-import Button from "./ui/button";
+import classes from "./event-item.module.css";
+import Button from "../ui/button";
 const EventItem = (props) => {
   const { title, date, image, location, id } = props;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {

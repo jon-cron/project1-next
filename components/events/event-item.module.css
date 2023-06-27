@@ -100,4 +100,7 @@
     flex-direction: row;
     justify-content: flex-end;
   }
+  .blackfont {
+    color: "#000000";
+  }
 }

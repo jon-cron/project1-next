@@ -1,5 +1,6 @@
 import Link from "next/link";
 import classes from "./events/event-item.module.css";
+import Button from "./ui/button";
 const EventItem = (props) => {
   const { title, date, image, location, id } = props;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -13,18 +14,18 @@ const EventItem = (props) => {
   return (
     <li className={classes.item}>
       <img src={"/" + image} alt="" />
-      <div>
-        <div>
-          <h2>{title}</h2>
-          <div>
+      <div className={classes.content}>
+        <div className={classes.summary}>
+          <h2 className={classes.blackfont}>{title}</h2>
+          <div className={classes.date}>
             <time>{formattedDate}</time>
           </div>
-          <div>
+          <div className={classes.address}>
             <address>{formattedAddress}</address>
           </div>
         </div>
-        <div>
-          <Link href={exploreLink}>Explore Event</Link>
+        <div className={classes.actions}>
+          <Button link={exploreLink}>Explore Event</Button>
         </div>
       </div>
     </li>

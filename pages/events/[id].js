@@ -5,7 +5,7 @@ const EventDetailPage = () => {
   const router = useRouter();
   const event = getEventById(router.query.id);
   if (!event) {
-    return <p>no event found</p>;
+    return <p>no event found.</p>;
   }
   return (
     <div>

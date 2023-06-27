@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import classes from "./events/event-item.module.css";
 const EventItem = (props) => {
   const { title, date, image, location, id } = props;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -11,7 +11,7 @@ const EventItem = (props) => {
   const formattedAddress = location.replace(", ", "\n");
   const exploreLink = `/events/${id}`;
   return (
-    <li>
+    <li className={classes.item}>
       <img src={"/" + image} alt="" />
       <div>
         <div>

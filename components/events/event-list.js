@@ -1,5 +1,14 @@
+import EventItem from "../event-item";
+
 const EventList = (props) => {
-  return <div></div>;
+  const { items } = props;
+  return (
+    <ul>
+      {items.map((item) => (
+        <EventItem />
+      ))}
+    </ul>
+  );
 };
 
 export default EventList;
